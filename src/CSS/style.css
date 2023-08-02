@@ -1,0 +1,147 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'League Spartan', sans-serif;
+	font-size: 17px;
+  color:#1B263B;
+
+}
+
+img {
+	height: auto;
+	width: 7%;
+	margin-left: 1%;
+	margin-top: 1%;
+}
+
+
+@media (max-width: 768px) {
+  img {
+    display: none;
+  }
+}
+
+
+
+#video-background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: -1;
+	filter: brightness(50%);
+
+}
+
+
+h1 {
+	color: white !important;
+	margin-top: 1%;
+	margin-left: 2%;
+	font-size: 76px;
+	text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+  
+  body {
+    background-color: #1B263B;
+  }
+  
+  .container {
+    background-color: #ffffff;
+    width: 80vw;
+    max-width: 37.5em;
+    padding: 3em 2.5em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0.62em;
+    box-shadow: 0 1.25em 1.8em rgba(8, 21, 65, 0.25);
+  }
+
+  #result {
+    margin-top: 1.25em;
+  }
+  
+  .container .flag-img {
+    display: block;
+    width: 45%;
+    min-width: 7.5em;
+    margin: 1.2em auto 1.8em auto;
+  }
+  
+  .container h2 {
+    font-weight: 600;
+    color: #1B263B;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.8em;
+  }
+  
+  .data-wrapper {
+    margin-bottom: 1em;
+    letter-spacing: 0.3px;
+  }
+  
+  .container h4 {
+    display: inline;
+    font-weight: 500;
+    color: #222a43;
+  }
+  
+  .container span {
+    color: #1B263B;
+  }
+  
+  .container h3 {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 400;
+    color: #ff465a;
+  }
+  p {
+    color: #1B263B;
+  }
+  i {
+    display: none;
+  } 
+
+  .search-wrapper {
+    display: grid;
+    grid-template-columns: 9fr 3fr;
+    gap: 1.25em;
+    margin-bottom: 1em; 
+  }
+  
+  .search-wrapper button {
+    font-size: 1em;
+    background-color: #1B263B;
+    color: #ffffff;
+    padding: 0.8em 0;
+    border: none;
+    border-radius: 1.5em;
+    cursor: pointer; 
+  }
+  
+  #reset-btn {
+    display: none;
+    font-size: 1em;
+    background-color: #1B263B;
+    color: #ffffff;
+    padding: 0.8em 44px;
+    border: none;
+    border-radius: 1.5em;
+    cursor: pointer;
+    margin-left: 78%;
+    margin-top: 3%;
+  } 
+
+
+  
