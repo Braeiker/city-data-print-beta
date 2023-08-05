@@ -1,4 +1,3 @@
-/* Reset e stile di base */
 * {
   padding: 0;
   margin: 0;
@@ -8,7 +7,10 @@
   color: #1B263B;
 }
 
-/* Stile per immagini */
+body {
+  background-color: #1B263B;
+}
+
 img {
   height: auto;
   width: 7%;
@@ -16,24 +18,6 @@ img {
   margin-top: 1%;
 }
 
-/* Stile generale del corpo della pagina */
-body {
-  background-color: #1B263B;
-}
-
-/* Stile per il video di sfondo */
-#video-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-  filter: brightness(50%);
-}
-
-/* Stile per l'elemento h1 (titolo principale) */
 h1 {
   color: white !important;
   margin-top: 1%;
@@ -42,18 +26,9 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 6vw; /* Dimensione del font in base alla larghezza del viewport */
-
-  /* Stile per il titolo h1 su schermi con larghezza massima di 500px (mobile) */
-  @media (max-width: 500px) {
-    font-size: 80px; /* Imposta una dimensione del font fissa per il formato mobile */
-    margin-top: 10%;
-    margin-left: 5%;
-  }
-  
+  font-size: 6vw;
 }
 
-/* Stile per il contenitore principale */
 .container {
   background-color: #ffffff;
   width: 80vw;
@@ -67,7 +42,6 @@ h1 {
   box-shadow: 0 1.25em 1.8em rgba(8, 21, 65, 0.25);
 }
 
-/* Stile per le immagini all'interno del contenitore */
 .container .flag-img {
   display: block;
   width: 45%;
@@ -75,7 +49,6 @@ h1 {
   margin: 1.2em auto 1.8em auto;
 }
 
-/* Stile per l'elemento h2 */
 .container h2 {
   font-weight: 600;
   color: #1B263B;
@@ -85,25 +58,21 @@ h1 {
   margin-bottom: 1.8em;
 }
 
-/* Stile per il wrapper dati */
 .data-wrapper {
   margin-bottom: 1em;
   letter-spacing: 0.3px;
 }
 
-/* Stile per l'elemento h4 */
 .container h4 {
   display: inline;
   font-weight: 500;
   color: #222a43;
 }
 
-/* Stile per gli elementi span */
 .container span {
   color: #1B263B;
 }
 
-/* Stile per l'elemento h3 */
 .container h3 {
   text-align: center;
   font-size: 1.2em;
@@ -111,17 +80,14 @@ h1 {
   color: #ff465a;
 }
 
-/* Stile per il paragrafo */
 p {
   color: #1B263B;
 }
 
-/* Nascondi gli elementi di tipo "i" */
 i {
   display: none;
 }
 
-/* Stile per il wrapper di ricerca */
 .search-wrapper {
   display: grid;
   grid-template-columns: 9fr 3fr;
@@ -129,7 +95,6 @@ i {
   margin-bottom: 1em;
 }
 
-/* Stile per il bottone di ricerca */
 .search-wrapper button {
   font-size: 15px;
   background-color: #1B263B;
@@ -140,7 +105,6 @@ i {
   cursor: pointer;
 }
 
-/* Stile per il bottone di reset */
 #reset-btn {
   display: none;
   font-size: 1em;
@@ -152,15 +116,36 @@ i {
   cursor: pointer;
   margin-left: 78%;
   margin-top: 3%;
+}
 
-  /* Stile per il bottone di reset su schermi con larghezza massima di 500px (mobile) */
-  @media (max-width: 500px) {
-    display: block; /* Mostra il bottone di reset */
-    /* Aggiungi qui le proprietà del bottone adatte per la visualizzazione mobile */
-    /* Ad esempio: */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 68px;
+    padding-left: 26px;
+    margin-top: 94px;
+}
+
+  p {
+    font-size: 14px;
+  }
+
+  .container {
+    width: 83vw;
+    padding: 7em 3.5em;
+}
+
+  .container .flag-img {
+    width: 100%;
+    margin: 1em auto 1.2em auto;
+  }
+
+  #reset-btn {
+    display: block;
     font-size: 0.8em;
     padding: 0.6em 30px;
-    margin-left: 0;
-    margin-top: 1em;
+    margin: 1em auto;
   }
+  img {
+    height: 0;
+}
 }
