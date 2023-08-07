@@ -26,7 +26,7 @@ The application has a simple user interface composed of the following elements:
 
 ## Attribution
 
-The application was created by [your_name] and utilizes the Teleport API to fetch city-related data. If you have any questions or comments about the application, you can contact me via [your_email_address].
+The application was created by Samuele Tantillo and utilizes the Teleport API to fetch city-related data. If you have any questions or comments about the application, you can contact me via samueletantillo@gmail.com .
 
 ## License
 
