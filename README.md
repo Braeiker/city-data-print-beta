@@ -28,6 +28,3 @@ The application has a simple user interface composed of the following elements:
 
 The application was created by Samuele Tantillo and utilizes the Teleport API to fetch city-related data. If you have any questions or comments about the application, you can contact me via samueletantillo@gmail.com .
 
-## License
-
-This project is licensed under the ISC License. For more details, see the LICENSE file.
