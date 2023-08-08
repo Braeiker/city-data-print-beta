@@ -46,6 +46,7 @@
     "graceful-fs": "^4.2.11",
     "has": "^1.0.3",
     "has-flag": "^4.0.0",
+    "html-webpack-plugin": "^5.5.3",
     "import-local": "^3.1.0",
     "interpret": "^3.1.1",
     "is-core-module": "^2.12.1",
