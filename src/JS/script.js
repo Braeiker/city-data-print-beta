@@ -1,16 +1,14 @@
-let searchForm = document.getElementById('search-form');
-let cityInput = document.getElementById('city-inp');
-let resultContainer = document.getElementById('result');
-let resetBtn = document.getElementById('reset-btn');
-let title = document.querySelector('.title');
+const searchBtn = document.getElementById('search-btn');
+const cityId = document.getElementById('city-inp');
+const resultContainer = document.getElementById('result');
+const resetBtn = document.getElementById('reset-btn');
+const title = document.querySelector('.title');
+const input = document.getElementById("city-inp");
 
 resetBtn.style.display = 'none';
 
-searchForm.addEventListener('submit', (event) => {
-  event.preventDefault(); // Previeni l'invio del modulo predefinito
-
-  let cityName = kebabCase(cityInput.value.trim().toLowerCase());
-
+function searchCity() {
+  let cityName = kebabCase(cityId.value.trim().toLowerCase());
   let finalUrl = `https://api.teleport.org/api/urban_areas/slug:${cityName}/scores/`;
 
   title.style.display = 'none';
@@ -54,10 +52,12 @@ searchForm.addEventListener('submit', (event) => {
         loadingElement.remove();
       }
     });
-});
+}
+
+searchBtn.addEventListener('click', searchCity);
 
 resetBtn.addEventListener('click', () => {
-  cityInput.value = '';
+  cityId.value = '';
   resultContainer.innerHTML = '';
   resultContainer.classList.remove('error');
 
@@ -65,6 +65,12 @@ resetBtn.addEventListener('click', () => {
   resetBtn.style.display = 'none';
 });
 
+input.addEventListener("keyup", function(event) {
+  if (event.key === "Enter") {
+    searchCity();
+  }
+});
+  
 function kebabCase(str) {
   return str.replace(/([a-z])([A-Z])/g, '$1-$2').replace(/\s+/g, '-').toLowerCase();
 }

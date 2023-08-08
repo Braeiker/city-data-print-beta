@@ -1,5 +1,5 @@
 const path = require('path');
-const HtmlWebpackPlugin=require("html-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: 'development',
@@ -15,13 +15,12 @@ module.exports = {
       template: path.resolve(__dirname, "./index.html")
     })
   ],
-  nodule:{
+  module: { // Correzione della proprietà 'nodule' in 'module'
     rules: [
       {
-      test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
-      type: "asset/resource"
-      } 
+        test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+        type: "asset/resource"
+      }
     ]
   }
 };
-
