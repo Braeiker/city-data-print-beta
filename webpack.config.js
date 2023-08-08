@@ -14,6 +14,14 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./index.html")
     })
-  ]
+  ],
+  nodule:{
+    rules: [
+      {
+      test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+      type: "asset/resource"
+      }
+    ]
+  }
 };
 
