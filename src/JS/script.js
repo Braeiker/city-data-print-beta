@@ -1,7 +1,3 @@
-import "..CSS/style.css"
-import icon from "../IMG/NEWCITY.png";
-
-
 let searchBtn = document.getElementById('search-btn');
 let cityId = document.getElementById('city-inp');
 let resultContainer = document.getElementById('result');
