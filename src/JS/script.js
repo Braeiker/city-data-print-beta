@@ -1,13 +1,15 @@
-let searchBtn = document.getElementById('search-btn');
-let cityId = document.getElementById('city-inp');
+let searchForm = document.getElementById('search-form');
+let cityInput = document.getElementById('city-inp');
 let resultContainer = document.getElementById('result');
 let resetBtn = document.getElementById('reset-btn');
 let title = document.querySelector('.title');
 
 resetBtn.style.display = 'none';
 
-searchBtn.addEventListener('click', () => {
-  let cityName = kebabCase(cityId.value.trim().toLowerCase());
+searchForm.addEventListener('submit', (event) => {
+  event.preventDefault(); // Previeni l'invio del modulo predefinito
+
+  let cityName = kebabCase(cityInput.value.trim().toLowerCase());
 
   let finalUrl = `https://api.teleport.org/api/urban_areas/slug:${cityName}/scores/`;
 
@@ -55,7 +57,7 @@ searchBtn.addEventListener('click', () => {
 });
 
 resetBtn.addEventListener('click', () => {
-  cityId.value = '';
+  cityInput.value = '';
   resultContainer.innerHTML = '';
   resultContainer.classList.remove('error');
 
