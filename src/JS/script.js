@@ -54,7 +54,10 @@ function searchCity() {
     });
 }
 
-searchBtn.addEventListener('click', searchCity);
+function kebabCase(str) {
+  return str.replace(/([a-z])([A-Z])/g, '$1-$2').replace(/\s+/g, '-').toLowerCase();
+}
+
 
 resetBtn.addEventListener('click', () => {
   cityId.value = '';
@@ -65,12 +68,11 @@ resetBtn.addEventListener('click', () => {
   resetBtn.style.display = 'none';
 });
 
+searchBtn.addEventListener('click', searchCity);
+
 input.addEventListener("keyup", function(event) {
   if (event.key === "Enter") {
     searchCity();
   }
 });
   
-function kebabCase(str) {
-  return str.replace(/([a-z])([A-Z])/g, '$1-$2').replace(/\s+/g, '-').toLowerCase();
-}
