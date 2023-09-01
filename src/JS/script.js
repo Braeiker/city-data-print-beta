@@ -4,12 +4,14 @@ const resultContainer = document.getElementById('result');
 const resetBtn = document.getElementById('reset-btn');
 const title = document.querySelector('.title');
 const input = document.getElementById("city-inp");
+const formEl = document.querySelector('form'); 
 
 resetBtn.style.display = 'none';
 
+// Funzione per gestire la ricerca
 function searchCity() {
   let cityName = kebabCase(cityId.value.trim().toLowerCase());
-  let finalUrl = `https://api.teleport.org/api/urban_areas/slug:${cityName}/scores/`;
+  let finalUrl = `https://api.teleport.org/api/urban_areas/slug:${cityName}/scores/`
 
   title.style.display = 'none';
   resultContainer.innerHTML = `<div class="loading">Loading...</div>`;
@@ -54,25 +56,31 @@ function searchCity() {
     });
 }
 
-function kebabCase(str) {
-  return str.replace(/([a-z])([A-Z])/g, '$1-$2').replace(/\s+/g, '-').toLowerCase();
+function handleSearch(event) {
+  event.preventDefault(); 
+  searchCity();
 }
 
-
-resetBtn.addEventListener('click', () => {
+function handleReset() {
   cityId.value = '';
   resultContainer.innerHTML = '';
   resultContainer.classList.remove('error');
 
   title.style.display = 'block';
   resetBtn.style.display = 'none';
-});
+}
 
-searchBtn.addEventListener('click', searchCity);
+if (formEl) {
+  formEl.addEventListener("submit", handleSearch);
+  formEl.addEventListener("reset", handleReset);
+}
+
+resetBtn.removeEventListener('click', handleReset);
+searchBtn.removeEventListener('click', searchCity);
 
 input.addEventListener("keyup", function(event) {
   if (event.key === "Enter") {
+    event.preventDefault(); 
     searchCity();
   }
 });
-  
